@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUICK TICKET BOOKING</title>
+    <style>
+        body {
+            background-image: url("data:image/png;base64,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" );
+            background-repeat: no-repeat;
+            background-position: right top;
+             margin-top: -10px;
+             background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6)),url(https://www.vetbossel.in/wp-content/uploads/2020/08/movie-ticketing-768x576.jpg);
+             background-repeat: no-repeat;
+             background-size: 1370px 700px;   
+            }
+            .white{
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>
+            <h1 style="color: #fff;">Quick Ticket</h1>
+        </legend>
+        <form action="confirm.html">
+            <label class="white">SELECT ZONE:</label>
+            <input type="text" name="zones" id="zones" list="zone">
+            <datalist id="zone">
+                <option>ayanambakkam</option>
+                <option>koyambedu</option>
+                <option>royapet</option>
+                <option>tambaram</option>
+            </datalist><br><br>
+            <label class="white">SELECT MOVIE:</label>
+            <input type="text" name="MOVIES" id="MOVIES" list="movie">
+            <datalist id="movie">
+                <option>beast</option>
+                <option>venom</option>
+                <option>don</option>
+                <option>thalavi</option>
+            </datalist><br><br>
+            <label class="white">SELECT THEATER</label>
+            <input type="text" list="theater">
+            <datalist id="theater">
+                <option>ROCKY THEATER</option>
+                <option>ABIRAMI THEATER</option>
+                <option>LAKSHMI THEATER</option>
+            </datalist><BR><BR>
+            <label class="white">SELECT TIME:</label>
+            <input type="time" list="times">
+            <datalist id="times">
+                <option>11.00 AM</option>
+                <option>3.00 PM</option>
+                <option>6.00 PM</option>
+                <option>10.00PM</option>
+            </datalist><BR><BR>
+            <label class="white">NO.OF TICKET:</label>
+            <input type="text">&emsp;<label class="white">BILL AMOUNT:</label><input type="number"><BR><BR>
+            <label class="white">MOBILE NUMBER:</label>
+            <input type="number"><BR><BR>
+            <label class="white">CARD NUMBER:</label>
+            <input type="number"><BR><BR>
+            <label class="white" for="start">EXP DATE:</label>
+            <input type="month" id="start" name="start" style="width: 50PX;">
+            <label class="white">CVV:</label>
+            <input type="number" style="width: 40px;">
+            <BR><BR>
+            <label class="white">OTP:</label>
+            <input type="number" style="width: 20PX;">
+            <input type="number" style="width: 20PX;">
+            <input type="number" style="width: 20PX;">
+            <input type="number" style="width: 20PX;"><BR><BR>
+            <button class="white" style="color:black;"><a href="confirm.html"></a> PAY NOW</button>
+        </form>
+</body>
+
+</html>
